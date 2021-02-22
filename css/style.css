@@ -3,6 +3,7 @@ html {
 }
 
 body {
+    overflow-x: hidden !important;
     margin: 0;
     padding: 0;
     font-family: 'Gilroy';
@@ -45,6 +46,10 @@ a {
   }
 
 /* ==== custom styles ==== */
+
+.bg-bblue {
+     background-color: #b2dbfa;
+}
 .text-brand {
     color: #e31e25;
 }
@@ -68,6 +73,9 @@ a {
     font-size: 4rem;
 }
 .sh-2 {
+    font-size: 2.5rem;
+}
+.sh-3 {
     font-size: 2.5rem;
 }
 .sh-3 {
@@ -177,3 +185,150 @@ header {
             .indicator {
                 right: 10px;
             }
+/*  ==== COUNTDOWN ==== */
+
+/*  ==== TRAINING ==== */
+
+/* ==== SERVICES ==== */
+.s-card {
+    box-sizing: border-box;
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+}
+    .s-card:hover{
+        background-color: #c9200f;
+        color: #fff;
+    }
+    .sc-img {
+        width: 100%;
+        transform: scale(2.4);
+    }
+        .sc-img img {
+            width: 90%;
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+
+        .sc-img img:not(:last-child) {
+            margin-left: 10px !important;
+        }
+
+    .sc-text {
+        color: #000;
+    }
+        .s-card:hover .sc-text {
+            color: #fff;
+        }
+        .s-card:hover .sc-info {
+            display: block !important;
+            font-size: 12px;
+        }
+
+/* ====VISION ==== */
+.vs-quote {
+    position: relative;
+    background-image: linear-gradient(90deg, #fff 50%, #fda4aa 50%);
+}
+    .vs-quote:before {
+        position: absolute;
+        content: '"';
+        top: -40px;
+        left: 54%;
+        transform: translateX(-40%);
+        font-size: 90px;
+    }
+
+.vs-img img {
+    max-width: 25%;
+}
+
+.vs-img p {
+    border: 2px solid #efefef;
+    border-radius: 8px;
+    font-size: 20px;
+    padding: 10px 10px;
+    padding-left: 30px !important;
+}
+    .vs-img .fa{
+        color: #fff;
+        background-color: #04a555;
+        border-radius: 100%;
+        padding: 8px;
+        font-size: 20px;
+        font-weight: 100;
+    }
+/*  ==== OUR TEAM ==== */
+.team-img {
+    width: 20%;
+    margin: 0 auto;
+    background-color: #e8e8e8;
+    border-radius: 100%;
+    padding: 50px 10px !important;
+}
+/*  ==== TESTIMONY SLIDER ==== */
+.t-img {
+    position: relative;
+    z-index: 99;
+}
+    .t-img:before {
+        position: absolute;
+        z-index: 999;
+        content: '"';
+        color: #0066b3;
+        top: -50px;
+        left: 30%;
+        transform: translateX(-70%);
+        font-size: 150px;
+    }
+    .t-img img {
+        border-radius: 100%;
+        border: 3px solid #0066b3;
+        transform: scale(1.1);
+        margin-top: 20px !important;
+    }
+    .t-img h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #0066b3;
+    }
+
+    .t-img p {
+        font-size: 0.8rem;
+    }
+/* ==== MY FOOTER ==== */
+footer {
+    background-color: #fafafa;
+}
+    .footer h3 {
+        font-size: 15px;
+    }
+
+    .footer-info {
+        padding-top: 80px !important;
+    }
+        .footer-info a {
+            font-size: 1.6rem;
+            color: #707070;
+        }
+            .footer-info a:hover {
+                font-weight: normal;
+            }
+        .fs-links a:not(:last-child){
+            margin-right: 15px;
+            color: #707070;
+        }
+
+    .contact-us {
+    }
+        .contact-us input, select, textarea {
+            width: 100%;
+            border: 1px solid #b2dbfa;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #0066b3;
+            color: #fff;
+        }
