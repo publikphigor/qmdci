@@ -104,6 +104,9 @@ header {
     top: 0;
     background: transparent;
 }
+    header.fixed {
+        background: #f4f4f4;
+    }
     .header {
         padding: 10px 0 !important;
         align-items: center;
@@ -185,6 +188,21 @@ header {
             .indicator {
                 right: 10px;
             }
+                .indicator div {
+                    background: #ccc;
+                    height: 3px;
+                    border-radius: 15px;
+                    width: 24px;
+                    margin-bottom: 5px;
+                    transition: 2.5s;
+                }
+                    .indicator .line-1,
+                    .indicator .line-2,
+                    .indicator .line-3 {
+                        background: #e31e25;
+                        width: 30px;
+                        transition: 2.5s;
+                    }
 /*  ==== COUNTDOWN ==== */
 
 /*  ==== TRAINING ==== */
