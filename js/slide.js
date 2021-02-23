@@ -1,25 +1,17 @@
-const dslider = document.querySelector('.slider');
-const dslides = document.querySelectorAll(".slide");
+const slider = document.querySelector('.lp-slider');
+const slides = document.querySelectorAll('.lp-slide');
 
-const mslider = document.querySelector('.m-slider');
-const mslides = document.querySelectorAll(".m-slide");
+let i = 0;
 
+showSlides();
 
-let n = 0;
-function nextSlide(slider, slides) {
-    n++;
-    slider.style.transform = `translateX(${-n * 33.33}%)`;
-    slider.style.transition = `transform 0.5s ease`;
-    if (n === slides.length){
-        n = -1;
-    }
-}
+function showSlides() {
+    slider.style.transform = `translateX(${-i * 33.33}%)`;
+    slider.style.transition = `0.5s ease`;
+    i++;
 
-function prevSlide(slider, slides) {
-    n--;
-    slider.style.transform = `translateX(${-n * 33.33}%)`;
-    slider.style.transition = `transform 0.5s ease`;
-    if (n < 0){
-        n = slides.length;
-    }
+    if(i === slides.length) {
+        i = 0;
+    };
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
 }
