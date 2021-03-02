@@ -61,6 +61,11 @@ a {
 }
 .bg-g-2 {
     background: #f8f7f7;
+    transition: 0.4s ease;
+}
+.bg-r-2 {
+    background: #fda4aa;
+    transition: 0.4s ease;
 }
 
 .text-green {
@@ -81,6 +86,14 @@ a {
 .text-bblue {
     color: #07b5b5;
 }
+.text-black {
+    color: #000;
+    transition: 0.4s ease;
+}
+.text-white {
+    color: #fff;
+    transition: 0.4s ease;
+}
 
 .sh-1 {
     font-size: 4rem;
@@ -91,10 +104,12 @@ a {
 .sh-3 {
     font-size: 2rem;
 }
+.sh-4 {
+    font-size: 1.5rem;
+}
 .sh-l {
     font-weight: 400;
 }
-
 .st-1 {
     font-size: 2rem;
 }
@@ -104,6 +119,10 @@ a {
 .st-3 {
     font-size: 1rem;
 }
+.f-w-b {
+    font-weight: 600;
+}
+
 .fix-spacing {
     margin-top: 120px;
 }
@@ -600,6 +619,17 @@ header {
             transition: 0.4s;
         }
 
+    .lt-1, .lt-2 {
+        cursor: pointer;
+    }
+    transition: 0.4s ease;
+    .course-outline {
+        padding-left: 10px;
+    }
+        .course-outline li {
+            padding-left: 10px;
+            list-style-type: disc;
+        }
 
 /* ==== MY FOOTER ==== */
 footer {

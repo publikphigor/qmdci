@@ -50,3 +50,5 @@ const x = setInterval(()=> {
     document.querySelector('#second').innerHTML = seconds;
 
 }, 1000);
+
+
