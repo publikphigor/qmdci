@@ -50,9 +50,19 @@ a {
 .bg-bblue {
      background-color: #b2dbfa;
 }
+.bg-brand {
+    background: #e31e25;
+}
 .text-brand {
     color: #e31e25;
 }
+.bg-g-1 {
+    background: #e8e8e8;
+}
+.bg-g-2 {
+    background: #f8f7f7;
+}
+
 .text-green {
     color: #bbd386;
 }
@@ -65,6 +75,9 @@ a {
 .text-g-3 {
     color: #656366;
 }
+.text-g-5 {
+    color: #707070;
+}
 .text-bblue {
     color: #07b5b5;
 }
@@ -76,10 +89,7 @@ a {
     font-size: 2.5rem;
 }
 .sh-3 {
-    font-size: 2.5rem;
-}
-.sh-3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 .sh-l {
     font-weight: 400;
@@ -93,6 +103,37 @@ a {
 }
 .st-3 {
     font-size: 1rem;
+}
+.fix-spacing {
+    margin-top: 120px;
+}
+
+@media screen and (max-width:1024px) {
+    .sh-1 {
+        font-size: 2.5rem;
+    }
+    .sh-2 {
+        font-size: 2rem;
+    }
+    .sh-3 {
+        font-size: 1.8rem;
+    }
+    .sh-3 {
+        font-size: 1.5rem;
+    }
+    .sh-l {
+        font-weight: 400;
+    }
+    
+    .st-1 {
+        font-size: 1.5rem;
+    }
+    .st-2 {
+        font-size: 1.3rem;
+    }
+    .st-3 {
+        font-size: 1rem;
+    }
 }
 
 /* ==== header ==== */
@@ -151,6 +192,83 @@ header {
                     margin-right: 10px;
                 }
 
+/* ==== MOBILE HEADER ==== */
+.mobile-header {
+    position: fixed;
+    background: #f4f4f4;
+    z-index: 997;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 100px;
+    display: none;
+}
+    .mobile-logo img {
+        height: 86px;
+        width: 86px;
+    }
+    .burger {
+        cursor: pointer;
+    }
+        .burger div {
+            height: 2px;
+            width: 25px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            background: #e31e25;
+        }
+.overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 998;
+    background: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: 1s;
+}
+    .overlay.active {
+        transform: scale(1);
+        transition: 1.5s;
+    }
+.mb-navbar {
+    position: fixed;
+    width: 80%;
+    background: #f4f4f4;
+    height: 50%;
+    z-index: 999;
+    right: 0;
+    top: 0;
+    padding: 30px;
+    box-sizing: border-box;
+    display: none;
+    transform: translateY(-100%);
+    transition: 1s;
+}
+    .mb-navbar.active {
+        transform: translateY(0);
+        transition: 1s;
+    }
+    .close-nav-btn {
+        font-size: 2.5rem;
+        color: #e31e25;
+        cursor: pointer;
+    }
+    .mb-navbar li {
+        padding: 10px 0;
+    }
+
+@media screen and (max-width:1024px) {
+    header {
+        display: none;
+    }
+    .mobile-header, .mb-navbar {
+        display: block;
+    }
+}
+
 /* ==== landing page ==== */
 .landing-page {
     overflow: hidden;
@@ -204,10 +322,109 @@ header {
                         width: 30px;
                         transition: 2.5s;
                     }
+
+@media screen and (max-width:1024px) {
+    .landing-page {
+        margin-top: 100px;
+        height: 350px;
+    }
+}
+
 /*  ==== COUNTDOWN ==== */
+.counter {
+    width: 50%;
+    margin: 0 auto;
+}
+    .timer {
+        height: 70px;
+        width: 70px;
+        text-align: center;
+        background: #5cb5ba;
+        border-radius: 50%;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+    }
+    .timer div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+    .timer span {
+        line-height: 1;
+    }
+    .timer-time {
+        color: #c10715;
+        font-weight: 600;
+        font-size: 1.3rem;
+    }
+
+    .enrol-btn {
+        background: #0066b3;
+        color: #fff !important;
+        text-decoration: none;
+        padding: 5px 20px;
+        transition: .4s;
+    }
+        .enrol-btn:hover {
+            font-weight: 300 !important;
+            letter-spacing: 1px;
+            transition: .4s;
+        }
+
+@media screen and (max-width:1024px) {
+    .countdown {
+        flex-direction: column;
+    }
+        .counter {
+            width: 90%;
+            margin: 10px 0;
+        }
+        .enrol-btn {
+            margin-top: 10px;
+        }
+}
 
 /*  ==== TRAINING ==== */
+.t-slider {
+    overflow-x: scroll;
+}
+    .t-card {
+        height: 350px;
+        width: 300px;
+        margin-right: 10px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+        .tc-img {
+            height: 70%;
+            width: 100%;
+        }
+            .tc-img img {
+                height: 100%;
+                width: 100%;
+            }
+        .tc-title {
+            height: 30%;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+            .tc-title .st-2 {
+                font-size: 1.3rem;
+            }
 
+@media screen and (max-width:1024px) {
+    .t-card {
+        height: 300px;
+        width: 300px;
+    }
+}
 /* ==== SERVICES ==== */
 .s-card {
     box-sizing: border-box;
@@ -242,6 +459,26 @@ header {
             display: block !important;
             font-size: 12px;
         }
+@media screen and (max-width:1024px) {
+    .s-card {
+        height: 400px;
+        background: #e31e25;
+        margin-bottom: 20px;
+        color: #fff !important;
+    }
+        .sc-text {
+            color: #fff;
+        }
+        .sc-text .d-none {
+            display: block !important;
+        }
+        .sc-img img {
+            margin: 0;
+        }
+    .sc-img {
+        transform: scale(1);
+    }
+}
 
 /* ====VISION ==== */
 .vs-quote {
@@ -251,10 +488,10 @@ header {
     .vs-quote:before {
         position: absolute;
         content: '"';
-        top: -40px;
+        top: -50px;
         left: 54%;
-        transform: translateX(-40%);
-        font-size: 90px;
+        transform: translateX(-50%);
+        font-size: 100px;
     }
 
 .vs-img img {
@@ -272,31 +509,41 @@ header {
         color: #fff;
         background-color: #04a555;
         border-radius: 100%;
-        padding: 8px;
-        font-size: 20px;
+        padding: 5px;
+        font-size: 10px;
         font-weight: 100;
     }
+
+/* ==== YOUTUBE ==== */
+.youtube iframe {
+    margin: 0 auto;
+    width: 100%;
+    height: 400px;
+}
 /*  ==== OUR TEAM ==== */
 .team-img {
     width: 20%;
     margin: 0 auto;
     background-color: #e8e8e8;
-    border-radius: 100%;
-    padding: 50px 10px !important;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    padding: 80px;
+    box-sizing: border-box;
 }
 /*  ==== TESTIMONY SLIDER ==== */
-.t-img {
+.t-img img {
     position: relative;
+    overflow: visible;
     z-index: 99;
 }
-    .t-img:before {
+    .t-img img::before {
         position: absolute;
         z-index: 999;
         content: '"';
         color: #0066b3;
-        top: -50px;
-        left: 30%;
-        transform: translateX(-70%);
+        top: -30px;
+        left: 0;
         font-size: 150px;
     }
     .t-img img {
@@ -314,6 +561,46 @@ header {
     .t-img p {
         font-size: 0.8rem;
     }
+@media screen and (max-width:1024px) {
+    .team-img {
+        padding: 30px;
+    }
+    .t-slide {
+        flex-direction: column;
+        align-items: center;
+    }
+    .t-img {
+        height: 150px;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+        .t-img:before {
+            font-size: 3rem;
+            left: 0;
+        }
+        .t-img img {
+            width: 120px;
+            height: 120px;
+        }
+}
+
+/* ==== COURSE DESCRIPTION PAGE ==== */
+.cd-card img {
+    width: 100%;
+}
+    .course-btn {
+        padding: 5px 20px;
+        background: #efefef;
+        font-weight: 600;
+        transition: 0.4s;
+    }
+        .course-btn:hover {
+            background: #707070;
+            color: #efefef;
+            transition: 0.4s;
+        }
+
+
 /* ==== MY FOOTER ==== */
 footer {
     background-color: #fafafa;
@@ -321,12 +608,8 @@ footer {
     .footer h3 {
         font-size: 15px;
     }
-
-    .footer-info {
-        padding-top: 80px !important;
-    }
         .footer-info a {
-            font-size: 1.6rem;
+            font-size: 1rem;
             color: #707070;
         }
             .footer-info a:hover {

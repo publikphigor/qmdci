@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Welcome | QMDCI</title>
+    <title>Courses | QMDCI</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="DC.Title" content="Xcityworld Digital Agency">
     <meta name="language" content="en-us" />
@@ -121,7 +121,7 @@
 </head>
 <body>
     <!-- ==== HEADER ==== -->
-    <header>
+    <header class="fixed">
         <div class="container d-flex justify-content-between header">
             <div id="logo"><img src="img/logo.png" alt=""></div>
             <nav>
@@ -168,97 +168,41 @@
         </ul>
     </div>
     <div class="overlay"></div>
+    <div class="fix-spacing"></div>
 
-    <!-- ===== LANDING PAGE ==== -->
-    <div class="landing-page container-fluid mb-4">
-        <div class="lp-slider d-flex justify-content-between">
-            <div class="lp-slide">
-                <div class="container">
-                    <h1 class="sh-1">
-                        QMDCI <br>
-                        Hospitality and <br>
-                        Tourism Institute.
-                    </h1>
-                    <div class="indicator">
-                        <div class="line-1"></div>
-                        <div></div>
-                        <div></div>
-                    </div>
+    <!-- ==== COURSE DESCRIPTION ==== -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="container cd-card">
+                    <img src="img/banquet.jpg" alt="">
                 </div>
             </div>
-            <div class="lp-slide">
+            <div class="col-12 col-lg-6">
                 <div class="container">
-                    <h1 class="sh-1">
-                        E choke o <br>
-                        Like Chuck <br>
-                        Noris.
-                    </h1>
-                    <div class="indicator">
-                        <div></div>
-                        <div class="line-2"></div>
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-            <div class="lp-slide">
-                <div class="container">
-                    <h1 class="sh-1">
-                        E choke o <br>
-                        Like Chuck <br>
-                        Noris.
-                    </h1>
-                    <div class="indicator">
-                        <div></div>
-                        <div></div>
-                        <div class="line-3"></div>
-                    </div>
+                    <h3 class="sh-3 text-brand">Event Management Training</h3>
+                    <p class="st-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, itaque necessitatibus. Minus quasi et hic accusamus, optio consequatur laboriosam placeat accusantium ad quia inventore vel asperiores ipsam officiis ex in? Similique officiis possimus a provident dolorum accusamus culpa sequi vero? Architecto culpa perferendis deserunt asperiores tenetur repudiandae, delectus aliquid quae.</p>
+                    <a href="" class="read-more text-brand">read more</a>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- ==== COUNTDOWN ==== -->
-    <div class="countdown container d-flex justify-content-between align-items-center">
-        <p class="st-2">Catering bootcamp begins in</p>
-        <div class="counter d-flex justify-content-around">
-            <div class="timer">
-                <div>
-                    <span id="day" class="timer-time">22</span>
-                    <span class="timer-label">Days</span>
-                </div>
-            </div>
-            <div class="timer">
-                <div>
-                    <span id="hour" class="timer-time"></span>
-                    <span class="timer-label">Hours</span>
-                </div>
-            </div>
-            <div class="timer">
-                <div>
-                    <span id="minute" class="timer-time"></span>
-                    <span class="timer-label">Minutes</span>
-                </div>
-            </div>
-            <div class="timer">
-                <div>
-                    <span id="second" class="timer-time"></span>
-                    <span class="timer-label">Seconds</span>
-                </div>
-            </div>
+        <div class="d-flex justify-content-left px-3 my-3 align-items-center">
+            <a href="" class="btn course-btn mr-5 st-3">Enroll now</a>
+            <p class="text-g-2 st-2 m-0 mr-5">6 weeks</p>
+            <p class="text-g-2 st-2 m-0">#2,000,000</p>
         </div>
-        <a href="#" class="btn enrol-btn">Enroll Now</a>
     </div>
 
+    <!-- ==== -->
+    <div class="container-fluid py-5 bg-g-1">
+        <div class="container bg-g-2 py-2">
+            <p class="text-black st-2 text-center m-0">What you'll learn</p>
+        </div>
+    </div>
     <!-- ==== TRAINING ==== -->
     <div class="training container p-0 my-5">
-        <h1 class="text-center text-brand mb-5">Trainings</h1>
+        <h1 class="text-center text-brand mb-5">Other Trainings</h1>
         <div class="t-slider d-flex">
-            <div class="t-slide">
-                <div class="container t-card">
-                    <h3 class="sh-2">Join us and skill up</h3>
-                    <p class="st-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione molestiae officia eaque asperiores distinctio, in dolorum blanditiis eum veniam nemo!</p>
-                </div>
-            </div>
             <a href="" class="t-slide">
                 <div class="container t-card">
                     <div class="tc-img">
@@ -309,95 +253,6 @@
                     </div>
                 </div>  
             </a>
-        </div>
-    </div>
-
-    <!-- ==== SERVICES ==== -->
-    <div class="container mb-5">
-        <h3 class="text-center text-brand sh-2">Our Services</h3>
-        <div class="row mt-5">
-            <div class=" col-12 col-lg-3">
-                <a href="">
-                    <div class="container s-card">
-                        <div class="sc-img"><img src="img/chiken soup.png" alt=""></div>
-                        <div class="sc-text">
-                            <h3 class="sc-title st-2">Catering Services</h3>
-                            <p class="st-3 sc-info d-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ratione voluptas ab alias neque ipsa officia asperiores eum? Beatae recusandae corporis pariatur officiis libero, necessitatibus consequatur quisquam eos blanditiis doloribus.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-12 col-lg-3">
-                <a href="">
-                    <div class="container s-card">
-                        <div class="sc-img"><img src="img/chiken soup.png" alt=""></div>
-                        <div class="sc-text">
-                            <h3 class="sc-title st-2">Events managements</h3>
-                            <p class="st-3 sc-info d-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ratione voluptas ab alias neque ipsa officia asperiores eum? Beatae recusandae corporis pariatur officiis libero, necessitatibus consequatur quisquam eos blanditiis doloribus.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-12 col-lg-3">
-                <a href="">
-                    <div class="container s-card">
-                        <div class="sc-img"><img src="img/chiken soup.png" alt=""></div>
-                        <div class="sc-text">
-                            <h3 class="sc-title st-2">Rentaks & Deco</h3>
-                            <p class="st-3 sc-info d-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ratione voluptas ab alias neque ipsa officia asperiores eum? Beatae recusandae corporis pariatur officiis libero, necessitatibus consequatur quisquam eos blanditiis doloribus.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-12 col-lg-3">
-                <a href="">
-                    <div class="container s-card">
-                        <div class="sc-img"><img src="img/chiken soup.png" alt=""></div>
-                        <div class="sc-text">
-                            <h3 class="sc-title st-2">Training</h3>
-                            <p class="st-3 sc-info d-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ratione voluptas ab alias neque ipsa officia asperiores eum? Beatae recusandae corporis pariatur officiis libero, necessitatibus consequatur quisquam eos blanditiis doloribus.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- ==== VISION ==== -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-lg-5">
-                <div class="container">
-                    <h3 class="sh-2 text-brand">Our Vision<br>Statement.</h3>
-                    <div class="vs-quote p-3">
-                        <p class="st-1">To nurture and develop world-class hospitality professionals who provide the desired customer service experience.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-5 container">
-                <div class="container vs-img pt-5">
-                    <img src="img/logo.png" alt="" class="m-auto d-block">
-                    <p class="st-1"><i class="fa fa-check mr-4"></i>NABTEB Accredited Centre</p>
-                    <p class="st-1"><i class="fa fa-check mr-4"></i>ITPN Accredited Centre</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ==== YOUTUBE ==== -->
-    <div class="container p-0 my-5 youtube">
-        <iframe src="https://www.youtube.com/embed/05H9smZ59Kk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-    <!-- ==== OUR TEAM ==== -->
-    <div class="container text-center my-5">
-        <h3 class="text-brand sh-2">Who we have worked with</h3>
-        <p class="  container st-3 sh-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex tempore architecto laboriosam quos perferendis ad esse aliquid alias reiciendis vel.</p>
-        <div class="d-flex justify-content-center container">
-            <img src="img/" alt="" class="team-img">
-            <img src="img/" alt="" class="team-img">
-            <img src="img/" alt="" class="team-img">
-            <img src="img/" alt="" class="team-img">
         </div>
     </div>
 

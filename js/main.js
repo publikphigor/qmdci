@@ -15,3 +15,38 @@ const slideObserver = new IntersectionObserver((entries, slideObserver) => {
 }, slideObserverOptions);
 
 slideObserver.observe(lp);
+
+//navbar
+const openNavbar = document.querySelector('.burger');
+const closeNavbar = document.querySelector('.close-nav-btn');
+const overlay = document.querySelector('.overlay');
+const navbar = document.querySelector('.mb-navbar');
+
+openNavbar.onclick = ()=> {
+    navbar.classList.add('active');
+    overlay.classList.add('active');
+};
+
+closeNavbar.onclick = ()=> {
+    navbar.classList.remove('active');
+    overlay.classList.remove('active');
+};
+
+
+//countdown 
+let countdownDate = new Date("March 30, 2021 17:00:00").getTime();
+const x = setInterval(()=> {
+    let now = new Date().getTime();
+    let distance = countdownDate - now;
+
+    let days = parseInt(Math.floor(distance / (1000 * 60 * 60 * 24)));
+    let hours = parseInt(Math.floor(distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = parseInt(Math.floor(distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = parseInt(Math.floor(distance % (1000 * 60)) / (1000));
+
+    document.querySelector('#day').innerHTML = days;
+    document.querySelector('#hour').innerHTML = hours;
+    document.querySelector('#minute').innerHTML = minutes;
+    document.querySelector('#second').innerHTML = seconds;
+
+}, 1000);
