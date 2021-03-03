@@ -1,3 +1,20 @@
+//navbar
+const openNavbar = document.querySelector('.burger');
+const closeNavbar = document.querySelector('.close-nav-btn');
+const overlay = document.querySelector('.overlay');
+const navbar = document.querySelector('.mb-navbar');
+
+openNavbar.onclick = ()=> {
+    navbar.classList.add('active');
+    overlay.classList.add('active');
+};
+
+closeNavbar.onclick = ()=> {
+    navbar.classList.remove('active');
+    overlay.classList.remove('active');
+};
+
+
 //fixed header 
 const header = document.querySelector('header');
 const navbarList = document.querySelectorAll('nav a');
@@ -16,21 +33,7 @@ const slideObserver = new IntersectionObserver((entries, slideObserver) => {
 
 slideObserver.observe(lp);
 
-//navbar
-const openNavbar = document.querySelector('.burger');
-const closeNavbar = document.querySelector('.close-nav-btn');
-const overlay = document.querySelector('.overlay');
-const navbar = document.querySelector('.mb-navbar');
 
-openNavbar.onclick = ()=> {
-    navbar.classList.add('active');
-    overlay.classList.add('active');
-};
-
-closeNavbar.onclick = ()=> {
-    navbar.classList.remove('active');
-    overlay.classList.remove('active');
-};
 
 
 //countdown 
