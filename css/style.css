@@ -696,6 +696,9 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+    .r-cont-3 h3 {
+        font-size: 3rem;
+    }
     .r-close-btn {
         cursor: pointer;
         color: #000;
@@ -764,6 +767,13 @@ header {
         width: 95%;
         padding: 20px !important;
         height: 400px;
+    }
+    .r-cont-3 {
+        width: 95%;
+        box-sizing: border-box;
+    }
+    .r-cont-3 h3 {
+        font-size: 2rem;
     }
 }
 
