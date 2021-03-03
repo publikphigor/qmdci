@@ -768,12 +768,18 @@ header {
         padding: 20px !important;
         height: 400px;
     }
+    .r-cont-2 {
+        height: 500px;
+    }
     .r-cont-3 {
         width: 95%;
         box-sizing: border-box;
     }
     .r-cont-3 h3 {
         font-size: 2rem;
+    }
+    .rc-mini .d-flex {
+        flex-direction: column  ;
     }
 }
 
