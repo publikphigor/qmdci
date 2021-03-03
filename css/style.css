@@ -680,6 +680,73 @@ header {
     .cta {
         height: 300px;
     }
+.r-cont {
+    width: 550px;
+    height: 500px;
+    border: 1px solid #ccc;
+    margin: 150px auto 0;
+    position: relative;
+}
+.r-cont-2 {
+    height: 350px;
+}
+.r-cont-3 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+    .r-close-btn {
+        cursor: pointer;
+        color: #000;
+        background: #fda4aa;
+        font-size: 1.2rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .r-form {
+        width: 100%;
+    }
+        .r-form input{
+            border: none;
+            padding: 10px 5px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            width: 100%;
+            box-sizing: border-box;
+        }
+            .r-cont .proceed {
+                width: 150px;
+                float: right;
+            }
+        .r-form select {
+            border: none;
+            border-bottom: 1px solid #ccc;
+            background: none;
+            padding: 10px 5px;
+        }
+    .rc-mini {
+        width: 75%;
+        margin: 10px 0;
+    }
+        .rn {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 5px;
+            width: 20%;
+        }
+        .rn2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #666;
+            margin-bottom: 5px;
+            width: 75%;
+        }
 
 @media screen and (max-width:1024px) {
     .slp {
@@ -692,6 +759,11 @@ header {
     .cta {
         flex-direction: column;
         justify-content: center !important;
+    }
+    .r-cont {
+        width: 95%;
+        padding: 20px !important;
+        height: 400px;
     }
 }
 

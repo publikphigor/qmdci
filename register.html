@@ -175,7 +175,7 @@
     <div class="fix-spacing"></div>
 
     <!-- ==== -->
-    <div class="r-cont p-5 pt-0">
+    <div class="r-cont r-cont-1 p-5 pt-0">
         <button class="r-close-btn">&times;</button>
         <h3 class="sh-3 text-brand text-center">Course Registration</h3>
         <div>
@@ -191,11 +191,51 @@
                     <option value="3">Course 3</option>
                     <option value="4">Course 4</option>
                 </select>
-                <input type="submit" class="btn btn-primary" value="Proceed">
+                <input type="button" class="btn btn-primary proceed r-next" value="Proceed">
             </form>
         </div>
     </div>
+    <div class="r-cont r-cont-2 p-5 pt-0 d-none">
+        <button class="r-close-btn">&times;</button>
+        <h3 class="sh-3 text-brand text-center">Course Payment</h3>
+        <div class="rc-mini">
+            <div class="d-flex justify-content-around">
+                <p class="rn">Name</p>
+                <h3 class="rn2">Raheem Talabi</h3>
+            </div>
+            <div class="d-flex justify-content-around m-0">
+                <p class="rn">Email</p>
+                <h3 class="rn2">Raheemtalabi134@gamil.com</h3>
+            </div>
+            <div class="d-flex justify-content-around m-0">
+                <p class="rn">Phone</p>
+                <h3 class="rn2">098163839201</h3>
+            </div>
+            <div class="d-flex justify-content-around m-0">
+                <p class="rn">Course</p>
+                <h3 class="rn2">Catering</h3>
+            </div>
+            <div class="d-flex justify-content-around m-0">
+                <p class="rn">Fees</p>
+                <h3 class="rn2">#2,000,000</h3>
+            </div>
+            <div class="d-flex justify-content-around m-0">
+                <p class="rn">Duration</p>
+                <h3 class="rn2">6 weeks</h3>
+            </div>
+            
+        </div>
+        <input type="submit" class="btn btn-primary proceed r-pay" value="Pay">
+    </div>
 
+    <div class="r-cont-3 d-none">
+        <h3 class="display-4 text-primary">
+            Congratulations <br>
+            Payment succesful!!!
+        </h3>
+    </div>
+
+    <script src="js/payment.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
