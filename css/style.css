@@ -396,19 +396,38 @@ header {
     height: 500px;
     margin: 0;
     padding: 0;
-    background-image: url('../img/1.jpg');
-    background-size: cover;
-    background-position-x: center;
+    
     background-position-y: -50px;
 }
+   
     .lp-slider {
         overflow: hidden;
         width: 300%;
         height: 100%;
+        position: relative;
     }
+        .lp-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(255,255,255,0.2);
+        }
         .lp-slide {
             width: 100%;
             height: 100%;
+            background-size: cover;
+            background-position-x: center;
+        }
+        .slide-1 {
+            background-image: url('../img/image\ 13.JPG');
+        }
+        .slide-2 {
+            background-image: url('../img/image\ 18.JPG');
+        }
+        .slide-3 {
+            background-image: url('../img/image\ 22.JPG');
         }
             .lp-slide .container {
                 width: 90%;
@@ -423,6 +442,7 @@ header {
             }
             .lp-slide h1 {
                 left: 0;
+                color: #e31e25;
             }
             .indicator {
                 right: 10px;
@@ -742,6 +762,23 @@ header {
             list-style-type: disc;
         }
 
+@media screen and (max-width:1024px) {
+    .enroll-flex a, .enroll-flex p {
+        font-size: .9rem !important;
+        margin: 0;
+    }
+    .course-btn {
+        padding: 5px;
+        font-weight: 500;
+    }
+    .container.p-5 {
+        padding: 10px !important;
+    }
+    .f-w-b {
+        font-size: .9rem;
+    }
+}
+
 /* ==== SERVICES PAGE ==== */
 .slp, .alp {
     height: 450px;
@@ -892,6 +929,9 @@ header {
         width: 100%;
         margin: 10px 0;
     }
+        .rm-1 {
+            width: 70%;
+        }
         .rn {
             font-size: 1rem;
             color: #666;
@@ -903,7 +943,6 @@ header {
             font-weight: 600;
             color: #666;
             margin-bottom: 5px;
-            width: 75%;
         }
         .dp {
             height: 100px;
