@@ -3,16 +3,26 @@ const openNavbar = document.querySelector('.burger');
 const closeNavbar = document.querySelector('.close-nav-btn');
 const overlay = document.querySelector('.overlay');
 const navbar = document.querySelector('.mb-navbar');
+const list1 = document.querySelector('.list-1');
+const list2 = document.querySelector('.list-2');
+const list3 = document.querySelector('.list-3');
+const list4 = document.querySelector('.list-4');
 
-openNavbar.onclick = ()=> {
+openNavbar.onclick = () => {
     navbar.classList.add('active');
     overlay.classList.add('active');
 };
 
-closeNavbar.onclick = ()=> {
+closeNavbar.onclick = () => {
     navbar.classList.remove('active');
     overlay.classList.remove('active');
 };
+
+
+function showList(list) {
+    list.classList.toggle('active');
+}
+
 
 
 //fixed header 
@@ -23,7 +33,7 @@ const lp = document.querySelector('.landing-page');
 const slideObserverOptions = {};
 const slideObserver = new IntersectionObserver((entries, slideObserver) => {
     entries.forEach(entry => {
-        if(!entry.isIntersecting) {
+        if (!entry.isIntersecting) {
             header.classList.add('fixed');
         } else {
             header.classList.remove('fixed');
@@ -38,7 +48,7 @@ slideObserver.observe(lp);
 
 //countdown 
 let countdownDate = new Date("March 30, 2021 17:00:00").getTime();
-const x = setInterval(()=> {
+const x = setInterval(() => {
     let now = new Date().getTime();
     let distance = countdownDate - now;
 
@@ -53,5 +63,3 @@ const x = setInterval(()=> {
     document.querySelector('#second').innerHTML = seconds;
 
 }, 1000);
-
-

@@ -10,7 +10,7 @@ function showSlides() {
     slider.style.transition = `0.5s ease`;
     i++;
 
-    if(i === slides.length) {
+    if (i === slides.length) {
         i = 0;
     };
     setTimeout(showSlides, 4000); // Change image every 2 seconds
