@@ -412,7 +412,7 @@ header {
             height: 100%;
             top: 0;
             left: 0;
-            background: rgba(255,255,255,0.2);
+            background: #57b5b550;
         }
         .lp-slide {
             width: 100%;
@@ -442,7 +442,7 @@ header {
             }
             .lp-slide h1 {
                 left: 0;
-                color: #e31e25;
+                color: #fff;
             }
             .indicator {
                 right: 10px;
@@ -790,9 +790,10 @@ header {
     z-index: 8;
 }
     .alp {
-        background-image: url('../img/banquet.jpg');
+        background-image: url('../img/team4.jpg');
+        background-position-y: -50px;
     }
-    .slp::before, .alp::before {
+    .slp::before {
         position: absolute;
         z-index: 9;
         width: 100%;
@@ -848,6 +849,7 @@ header {
         background: #707070;
         box-sizing: border-box;
         border-radius: 5px;
+        overflow: hidden;
     }
     .box-1 {
         grid-area: box-1;
@@ -864,6 +866,10 @@ header {
     .box-5 {
         grid-area: box-5;
     }
+        .g-img {
+            height: 100%;
+            width: 100%;
+        }
 .r-cont {
     width: 550px;
     max-height: auto;
@@ -909,7 +915,6 @@ header {
         }
             .r-cont .proceed {
                 width: 150px;
-                float: right;
             }
             .f-split input {
                 width: 45%;
@@ -969,7 +974,7 @@ header {
     .r-cont {
         width: 95%;
         padding: 20px !important;
-        height: auto;
+        height: 90%;
     }
     .r-cont-2 {
         height: 500px;
