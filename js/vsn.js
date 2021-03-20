@@ -31,3 +31,23 @@ openOm.onclick = ()=>{
     openCv.classList.remove('active');
     openOv.classList.remove('active');
 };
+
+
+//gallery
+
+let teamImages = document.querySelectorAll('.gallery div');
+const gOverlay = document.querySelector('.g-overlay');
+teamImages.forEach(image =>{
+    image.addEventListener('click', e =>{
+        let expanded = e.target;
+        expanded.classList.add('expand');
+        gOverlay.classList.add('expand');
+        
+        gOverlay.onclick = ()=>{
+            expanded.classList.remove('expand');
+            gOverlay.classList.remove('expand');
+        }
+    })
+
+    
+});

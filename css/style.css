@@ -221,19 +221,19 @@ header {
         /* dropdown menu */
         .has-children:hover .submenu {
             display: block;
-            transition: 0.4s;
+            animation: trans-in 0.4s linear;
         }
         .has-children-2:hover .submenu-2 {
             display: block;
-            transition: 0.4s;
+            animation: trans-in 0.4s linear;
         }
         .has-children-3:hover .submenu-3 {
             display: block;
-            transition: 0.4s;
+            animation: trans-in 0.4s linear;
         }
         .has-children-4:hover .submenu-4 {
             display: block;
-            transition: 0.4s;
+            animation: trans-in 0.4s linear;
         }
         .submenu {
             display: none;
@@ -241,12 +241,14 @@ header {
             top: 100px;
             background: #f4f4f4;
             height: auto;
-            padding: 20px;
+            padding: 20px 0;
         }
             .submenu li {
                 display: block;
-                line-height: 2em;
+                line-height: 2.5em;
+                padding: 0 20px;
             }
+                
             .has-children-2 {
                 position: relative;
             }
@@ -266,12 +268,13 @@ header {
                 .submenu-3 {
                     position: absolute;
                     background: #f4f4f4;
-                    padding: 20px;
+                    padding: 20px 0;
                     width: auto;
                     display: none;
                 }
                     .submenu-3 li {
-                        line-height: 2em;
+                        line-height: 2.5em;
+                        padding: 0 20px;
                     }
                 .submenu-4 {
                     position: absolute;
@@ -281,8 +284,28 @@ header {
                     display: none;
                 }
                     .submenu-4 li {
-                        line-height: 2em;
+                        line-height: 2.5em;
                     }
+                    .submenu li:hover,
+                    .submenu-2 li:hover,
+                    .submenu-3 li:hover,
+                    .submenu-4 li:hover {
+                        background: #e31e25;
+                        color: #fff;
+                        margin: 0 !important;
+                    }
+                    .submenu li:hover a,
+                    .submenu-3 li:hover a,
+                    .submenu-4 li:hover a {
+                        color: #fff;
+                        font-weight: 300;
+                    }
+                    .has-children-2:hover a {
+                        color: #e31e25 !important;
+                    }
+                        .submenu-2 li:hover a {
+                            color: #fff !important;
+                        }
 
 
 /* ==== MOBILE HEADER ==== */
@@ -715,7 +738,9 @@ header {
     }
 @media screen and (max-width:1024px) {
     .team-img {
-        padding: 30px;
+        padding: 5px;
+        width: 25%;
+        height: auto;
     }
     .t-slide {
         flex-direction: column;
@@ -851,6 +876,7 @@ header {
         box-sizing: border-box;
         border-radius: 5px;
         overflow: hidden;
+        cursor: pointer;
     }
     .box-1 {
         grid-area: box-1;
@@ -870,7 +896,41 @@ header {
         .g-img {
             height: 100%;
             width: 100%;
+            transition: 0.3s ease;
         }
+        .g-img.expand {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 95%;
+            max-width: 750px;
+            height: 400px;
+            transform: translate(-50%, -50%);
+            transition: 0.3s ease;
+            z-index: 99;
+        }
+        .g-overlay {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0,0,0,0.7);
+            transform: scale(0);
+            transition: 0.3s ease;
+            z-index: 98;
+            cursor: pointer;
+        }
+            .g-overlay.expand {
+                transform: scale(1);
+                transition: 0.3s ease;
+            }
+            .g-overlay span {
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
 .r-cont {
     width: 550px;
     max-height: auto;
@@ -1060,3 +1120,16 @@ footer {
             background-color: #0066b3;
             color: #fff;
         }
+
+/* keyframes */
+@keyframes trans-in {
+	from {
+		opacity: 0;
+		transform: scale(0.2) rotate(-30deg) perspective(10000px) rotate3d(0, 1, 0, 140deg);
+		/*transform: scale(0.2);*/
+	}
+	to {
+		opacity: 1;
+		transform: perspective(800px) rotate3d(0, 1, 0, 0deg);
+	}
+}
